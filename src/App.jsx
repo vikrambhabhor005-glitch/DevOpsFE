@@ -11,7 +11,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://devopsbe-flto.onrender.com"
+        "https://devopsbe-flto.onrender.com/docs#/default/test_api_api_test_get"
       );
 
       if (!response.ok) {
