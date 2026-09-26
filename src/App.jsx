@@ -11,12 +11,13 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/test"
+        "https://devopsbe-flto.onrender.com"
       );
 
       if (!response.ok) {
         throw new Error("Backend error");
       }
+
 
       const data = await response.json();
 
@@ -24,7 +25,7 @@ function App() {
 
     } catch (error) {
       setStatus(
-        "🔴 Backend Not Connected"
+        "Backend Not Connected "
       );
     }
 

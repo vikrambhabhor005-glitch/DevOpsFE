@@ -1,0 +1,46 @@
+name: React First Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build:
+    name: Build React Project
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 1. GitHub repository ka code checkout
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Node.js install
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      # 3. Install dependencies
+      - name: Install Dependencies
+        run: npm ci
+
+      # 4. Build React project
+      - name: Build React Project
+        run: npm run build
+
+
+  deploy:
+    name: Deploy to Render
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 5. Render Deploy Hook
+      - name: Deploy via Render Deploy Hook
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
