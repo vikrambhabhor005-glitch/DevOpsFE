@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8ff;
+  color: #14213d;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* Navbar */
+
+nav {
+  height: 70px;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+
+  border-bottom: 1px solid #ddd;
+}
+
+nav h2 {
+  color: #1677ff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #14213d;
+}
+
+
+/* Hero */
+
+.hero {
+  text-align: center;
+
+  padding: 100px 20px;
+
+  background: linear-gradient(
+    135deg,
+    white,
+    #eaf3ff
+  );
+}
+
+.tag {
+  color: #1677ff;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 60px;
+
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #1677ff;
+}
+
+.description {
+  max-width: 600px;
+
+  margin: auto;
+
+  color: #666;
+
+  font-size: 18px;
+}
+
+
+/* Button */
+
+button {
+  margin-top: 25px;
+
+  padding: 14px 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #1677ff;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: #075dcc;
+}
+
+.message {
+  margin-top: 15px;
+
+  color: green;
+
+  font-weight: bold;
+}
+
+
+/* About */
+
+.about {
+  padding: 70px 8%;
+
+  text-align: center;
+
+  background: white;
+}
+
+.about h2 {
+  font-size: 35px;
+
+  margin-bottom: 35px;
+}
+
+
+/* Cards */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.card {
+  padding: 30px;
+
+  background: #f5f8ff;
+
+  border: 1px solid #ddd;
+
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: #1677ff;
+
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+}
+
+
+/* Footer */
+
+footer {
+  padding: 25px;
+
+  text-align: center;
+
+  background: #14213d;
+
+  color: white;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+}
